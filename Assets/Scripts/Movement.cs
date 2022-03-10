@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour
 
     private void IsFaling()
     {
-        if ((body.velocity.y) < 0.1f && grounded == false)
+        if ((body.velocity.y) < 0)
         {
             faling = true;
         }
@@ -66,6 +66,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             grounded = true;
+            faling = false;
         }
     }
 }
